@@ -13,19 +13,17 @@ import lombok.Data;
 
 @Entity
 @Data
-public class User {
+public class Account {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-//	private String id;
-	
 	private String nickname;
 	
-	private String name;
-	
 	private String password;
+	
+	private String name;
 	
 	private String email;
 	
@@ -33,9 +31,9 @@ public class User {
 	
 	private LocalDate birthday;
 	
-	private String regdate;
+	private String joined_at;
 	
-	private String profile_img_url;
+//	private String profile_img_url;
 	
 //	private long male_persent;
 	
@@ -43,27 +41,12 @@ public class User {
 	
 	private Integer age;
 	
-//	User(1) : ReadingProgress(N) 설정
-	@OneToMany(mappedBy = "user_id")
+//	Account(1) : ReadingProgress(N) 설정
+	@OneToMany(mappedBy = "account_id")
 	public List<ReadingProgress> readingProgress;
 	
-//	User(1) : ReadingNoteBookmark(N) 설정
-	@OneToMany(mappedBy = "user_id")
+//	Account(1) : ReadingNoteBookmark(N) 설정
+	@OneToMany(mappedBy = "account_id")
 	public List<ReadingNoteBookmark> readingNoteBookmark;
 	
-////	User(1) : Gender(N) 설정
-//	@OneToMany(mappedBy = "user_id")
-//	public List<GenderTest> genderTest;
-	
-////	User(1) : ReadingNote(N) 설정
-//	@OneToMany(mappedBy = "user_id")
-//	public List<ReadingNote> readingNote;
-	
-////	User(1) : BookCategory(N) 설정
-//	@OneToMany(mappedBy = "user_id")
-//	public List<BookCategory> bookCategory;
-	
-////	User(1) : Heart(N) 설정
-//	@OneToMany(mappedBy = "user_id")
-//	public List<Heart> heart;
 }

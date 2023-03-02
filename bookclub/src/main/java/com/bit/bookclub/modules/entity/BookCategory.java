@@ -20,12 +20,8 @@ public class BookCategory {
 	
 	private String book_category_name;
 	
-////	User(1) : BookCategory(N) 설정
-////	@ManyToOne
-//	@Column(name = "user_id")
-//	private Integer user_id;
-	
 //	BookCategory(1) : Book(N) 설정
 	@OneToMany(mappedBy = "book_category_id")
 	public List<Book> book;
+	
 }

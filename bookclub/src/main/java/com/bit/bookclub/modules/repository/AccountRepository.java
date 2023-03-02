@@ -2,9 +2,9 @@ package com.bit.bookclub.modules.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.bit.bookclub.modules.entity.User;
+import com.bit.bookclub.modules.entity.Account;
 
-public interface UserRepository extends JpaRepository<User, Integer>{
+public interface AccountRepository extends JpaRepository<Account, Integer>{
 
 	Integer countByGender(String gender);
 	

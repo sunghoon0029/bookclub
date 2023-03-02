@@ -6,23 +6,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.bit.bookclub.modules.entity.User;
-import com.bit.bookclub.modules.service.UserService;
+import com.bit.bookclub.modules.entity.Account;
+import com.bit.bookclub.modules.service.AccountService;
 
 @Controller
 public class AgeGraphTestController {
 
 	@Autowired
-	UserService userService;
+	AccountService accountService;
 	
 	@GetMapping("/test")
-	public void ageGraph(List<User> userList) {
+	public void ageGraph(List<Account> userList) {
 		
 		int[] ageGroupCount = new int[5]; // 10~19, 20~29, 30~39, 40~49, 50~59
 		int totalUser = userList.size();
 		
-	    for (User user : userList) {
-	        int age = user.getAge();
+	    for (Account account : userList) {
+	        int age = account.getAge();
 	        if (age >= 10 && age < 20) {
 	            ageGroupCount[0]++;
 	        } else if (age >= 20 && age < 30) {

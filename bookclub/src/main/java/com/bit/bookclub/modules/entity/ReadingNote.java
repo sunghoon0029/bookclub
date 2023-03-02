@@ -37,10 +37,10 @@ public class ReadingNote {
 	
 	private Integer reading_note_open;
 	
-////	User(1) : ReadingNote(N) 설정
+////	Account(1) : ReadingNote(N) 설정
 ////	@ManyToOne
-//	@Column(name = "user_id")
-//	private Integer user_id;
+//	@Column(name = "account_id")
+//	private Integer account_id;
 	
 //	Book(1) : ReadingNote(N) 설정
 //	@ManyToOne
@@ -54,9 +54,5 @@ public class ReadingNote {
 //	ReadingNote(1) : ReadingNoteComment(N) 설정
 	@OneToMany(mappedBy = "reading_note_id")
 	public List<ReadingNoteComment> readingNoteComment;
-	
-////	ReadingNote(1) : Heart(N) 설정
-//	@OneToMany(mappedBy = "reading_note_id")
-//	public List<Heart> heart;
 	
 }

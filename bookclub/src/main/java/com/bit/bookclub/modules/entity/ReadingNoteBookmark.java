@@ -18,10 +18,10 @@ public class ReadingNoteBookmark {
 	
 	private Integer count;
 	
-//	User(1) : ReadingNoteBookmark(N) 설정
+//	Account(1) : ReadingNoteBookmark(N) 설정
 //	@ManyToOne
-	@Column(name = "user_id")
-	private Integer user_id;
+	@Column(name = "account_id")
+	private Integer account_id;
 	
 //	ReadingNote(1) : ReadingNoteBookmark(N) 설정
 //	@ManyToOne

@@ -26,8 +26,9 @@ public class ReadingProgress {
 	
 	private Integer attainment_percent;
 
-//	User(1) : ReadingProgress(N) 설정
+//	Account(1) : ReadingProgress(N) 설정
 //	@ManyToOne
-	@Column(name = "user_id")
-	private Integer user_id;
+	@Column(name = "account_id")
+	private Integer account_id;
+	
 }
