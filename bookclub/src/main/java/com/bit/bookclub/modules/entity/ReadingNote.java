@@ -17,7 +17,7 @@ public class ReadingNote {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer no;
+	private Integer id;
 	
 	private String reading_note_title;
 	
@@ -39,24 +39,24 @@ public class ReadingNote {
 	
 ////	User(1) : ReadingNote(N) 설정
 ////	@ManyToOne
-//	@Column(name = "user_no")
-//	private Integer user_no;
+//	@Column(name = "user_id")
+//	private Integer user_id;
 	
 //	Book(1) : ReadingNote(N) 설정
 //	@ManyToOne
-	@Column(name = "book_no")
-	private Integer book_no;
+	@Column(name = "book_id")
+	private Integer book_id;
 	
 //	ReadingNote(1) : ReadingNoteBookmark(N) 설정
-	@OneToMany(mappedBy = "reading_note_no")
+	@OneToMany(mappedBy = "reading_note_id")
 	public List<ReadingNoteBookmark> readingNoteBookmark;
 	
 //	ReadingNote(1) : ReadingNoteComment(N) 설정
-	@OneToMany(mappedBy = "reading_note_no")
+	@OneToMany(mappedBy = "reading_note_id")
 	public List<ReadingNoteComment> readingNoteComment;
 	
 ////	ReadingNote(1) : Heart(N) 설정
-//	@OneToMany(mappedBy = "reading_note_no")
+//	@OneToMany(mappedBy = "reading_note_id")
 //	public List<Heart> heart;
 	
 }

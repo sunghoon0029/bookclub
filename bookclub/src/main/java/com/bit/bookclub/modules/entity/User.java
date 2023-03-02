@@ -17,7 +17,7 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer no;
+	private Integer id;
 	
 //	private String id;
 	
@@ -44,26 +44,26 @@ public class User {
 	private Integer age;
 	
 //	User(1) : ReadingProgress(N) 설정
-	@OneToMany(mappedBy = "user_no")
+	@OneToMany(mappedBy = "user_id")
 	public List<ReadingProgress> readingProgress;
 	
 //	User(1) : ReadingNoteBookmark(N) 설정
-	@OneToMany(mappedBy = "user_no")
+	@OneToMany(mappedBy = "user_id")
 	public List<ReadingNoteBookmark> readingNoteBookmark;
 	
 ////	User(1) : Gender(N) 설정
-//	@OneToMany(mappedBy = "user_no")
+//	@OneToMany(mappedBy = "user_id")
 //	public List<GenderTest> genderTest;
 	
 ////	User(1) : ReadingNote(N) 설정
-//	@OneToMany(mappedBy = "user_no")
+//	@OneToMany(mappedBy = "user_id")
 //	public List<ReadingNote> readingNote;
 	
 ////	User(1) : BookCategory(N) 설정
-//	@OneToMany(mappedBy = "user_no")
+//	@OneToMany(mappedBy = "user_id")
 //	public List<BookCategory> bookCategory;
 	
 ////	User(1) : Heart(N) 설정
-//	@OneToMany(mappedBy = "user_no")
+//	@OneToMany(mappedBy = "user_id")
 //	public List<Heart> heart;
 }

@@ -17,7 +17,7 @@ public class Book {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer no;
+	private Integer id;
 	
 	private String book_title;
 	
@@ -31,11 +31,11 @@ public class Book {
 	
 //	BookCategory(1) : Book(N) 설정
 //	@ManyToOne
-	@Column(name = "book_category_no")
-	private Integer book_category_no;
+	@Column(name = "book_category_id")
+	private Integer book_category_id;
 	
 //	Book(1) : ReadingNote(N) 설정
-	@OneToMany(mappedBy = "book_no")
+	@OneToMany(mappedBy = "book_id")
 	public List<ReadingNote> readingNote;
 	
 }

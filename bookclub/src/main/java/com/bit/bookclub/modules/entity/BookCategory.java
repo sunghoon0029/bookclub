@@ -16,16 +16,16 @@ public class BookCategory {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer no;
+	private Integer id;
 	
 	private String book_category_name;
 	
 ////	User(1) : BookCategory(N) 설정
 ////	@ManyToOne
-//	@Column(name = "user_no")
-//	private Integer user_no;
+//	@Column(name = "user_id")
+//	private Integer user_id;
 	
 //	BookCategory(1) : Book(N) 설정
-	@OneToMany(mappedBy = "book_category_no")
+	@OneToMany(mappedBy = "book_category_id")
 	public List<Book> book;
 }

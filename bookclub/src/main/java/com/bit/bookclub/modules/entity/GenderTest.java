@@ -15,7 +15,7 @@ package com.bit.bookclub.modules.entity;
 //
 //	@Id
 //	@GeneratedValue(strategy = GenerationType.IDENTITY)
-//	private Integer no;
+//	private Integer id;
 //	
 //	private long male_persent;
 //	
@@ -23,6 +23,6 @@ package com.bit.bookclub.modules.entity;
 //	
 ////	User(1) : Gender(N) 설정
 ////	@ManyToOne
-//	@Column(name = "user_no")
-//	private Integer user_no;
+//	@Column(name = "user_id")
+//	private Integer user_id;
 //}

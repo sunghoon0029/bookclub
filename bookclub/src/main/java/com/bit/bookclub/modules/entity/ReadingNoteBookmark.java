@@ -14,18 +14,18 @@ public class ReadingNoteBookmark {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer no;
+	private Integer id;
 	
 	private Integer count;
 	
 //	User(1) : ReadingNoteBookmark(N) 설정
 //	@ManyToOne
-	@Column(name = "user_no")
-	private Integer user_no;
+	@Column(name = "user_id")
+	private Integer user_id;
 	
 //	ReadingNote(1) : ReadingNoteBookmark(N) 설정
 //	@ManyToOne
-	@Column(name = "reading_note_no")
-	private Integer reading_note_no;
+	@Column(name = "reading_note_id")
+	private Integer reading_note_id;
 	
 }
