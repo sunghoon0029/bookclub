@@ -44,6 +44,12 @@ public class ReadingNoteService {
 	// 수정 처리
 	public ReadingNote updateReadingNote(ReadingNote readingNote) {
 		
+		// 작성일자 문자열 변경
+		LocalDateTime nowDateTime = LocalDateTime.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
+		
+		readingNote.setReading_note_regdate(nowDateTime.format(formatter));
+		
 		return readingNoteRepository.saveAndFlush(readingNote);
 	}
 	
