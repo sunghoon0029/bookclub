@@ -10,8 +10,6 @@ import lombok.Data;
 
 @Entity
 @Data
-//@AllArgsConstructor
-//@NoArgsConstructor
 public class ReadingProgress {
 
 	@Id
