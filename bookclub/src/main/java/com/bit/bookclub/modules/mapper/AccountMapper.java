@@ -1,11 +1,11 @@
-package com.bit.bookclub.modules.mapper;
-
-import org.mapstruct.Mapper;
-
-@Mapper
-public interface AccountMapper {
-//	Accountmapper INSTANCE = Mappers.getMapper(AccountMapper.class)
-//	
+//package com.bit.bookclub.modules.mapper;
 //
-//	AccountDto toDto(Account account);
-}
+//import org.mapstruct.Mapper;
+//
+//@Mapper
+//public interface AccountMapper {
+////	Accountmapper INSTANCE = Mappers.getMapper(AccountMapper.class)
+////	
+////
+////	AccountDto toDto(Account account);
+//}

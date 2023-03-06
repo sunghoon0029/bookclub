@@ -63,10 +63,9 @@ public class AccountController {
 	}
 	
 //	@GetMapping("/test")
-//	public void getAgeGraph() {
-//		List<Account> userList = new ArrayList<>();
+//	public void getAgeGraph(Account account) {
 //		
-//		accountService.ageGraph(userList);
+//		accountService.ageGraph(null);
 //	}
 	
 }

@@ -44,8 +44,21 @@ public class AccountService {
 			
 			account.setAge(nowDate.getYear() - birthday.getYear());
 			
-			
 			return accountRepository.save(account);
+			
+//			// 연령대 그래프
+//			int age = account.getAge();
+//			
+//	        if (age >= 20 && age < 30) {
+//	            account.setTwentys_count(+1);
+//	        } else if (age >= 30 && age < 40) {
+//	            account.setThirtys_count(+1);
+//	        } else if (age >= 40 && age < 50) {
+//	            account.setFortys_count(+1);
+//	        } else if (age >= 50 && age < 60) {
+//	            account.setFifties_count(+1);
+//	        }
+			
 		}
 		
 //		// 작성 처리
@@ -106,6 +119,35 @@ public class AccountService {
 //		        double percentage = (double) ageGroupCount[i] / totalAccount * 100;
 //		        System.out.printf("%d대: %.2f%%\n", (i + 1) * 10, percentage);
 //		    }
+//		}
+		
+//		// 연령대 그래프
+//		public Account ageGraph(Account account) {
+//			
+//			int twentys_count = 0;
+//			int thirtys_count = 0;
+//			int fortys_count = 0;
+//			int fifties_count = 0;
+//			
+//			int age = account.getAge();
+//			
+//	        if (age >= 20 && age < 30) {
+//	        	twentys_count++;
+//	        } else if (age >= 30 && age < 40) {
+//	        	thirtys_count++;
+//	        } else if (age >= 40 && age < 50) {
+//	        	fortys_count++;
+//	        } else if (age >= 50 && age < 60) {
+//	        	fifties_count++;
+//	        }
+	        
+//			// 현재일자와 생년월일을 이용한 만나이 계산
+//			LocalDate birthday = account.getBirthday();
+//			LocalDate nowDate = LocalDate.now();
+//			
+//			account.setAge(nowDate.getYear() - birthday.getYear());
+//			
+//			return accountRepository.saveAndFlush(account);
 //		}
 		
 }

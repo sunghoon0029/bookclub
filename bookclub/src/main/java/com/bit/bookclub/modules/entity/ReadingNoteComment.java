@@ -16,7 +16,7 @@ public class ReadingNoteComment {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	private String user_id;
+//	private String user_id;
 	
 	private String content;
 	
@@ -28,5 +28,10 @@ public class ReadingNoteComment {
 //	@ManyToOne
 	@Column(name = "reading_note_id")
 	private Integer reading_note_id;
+	
+//	Account(1) : ReadingNoteComment(N) 설정
+//	@ManyToOne
+	@Column(name = "account_id")
+	private Integer account_id;
 	
 }
