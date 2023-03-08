@@ -1,6 +1,6 @@
 package com.bit.bookclub.modules.entity;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -37,22 +37,22 @@ public class ReadingNote {
 	
 	private Integer reading_note_open;
 	
-////	Account(1) : ReadingNote(N) 설정
-////	@ManyToOne
-//	@Column(name = "account_id")
-//	private Integer account_id;
+//	Account(1) : ReadingNote(N) 설정
+//	@ManyToOne
+	@Column(name = "account_id")
+	private Integer account_id;
 	
 //	Book(1) : ReadingNote(N) 설정
 //	@ManyToOne
 	@Column(name = "book_id")
 	private Integer book_id;
 	
-//	ReadingNote(1) : ReadingNoteBookmark(N) 설정
-	@OneToMany(mappedBy = "reading_note_id")
-	public List<ReadingNoteBookmark> readingNoteBookmark;
+////	ReadingNote(1) : ReadingNoteBookmark(N) 설정
+//	@OneToMany(mappedBy = "reading_note_id")
+//	public List<ReadingNoteBookmark> readingNoteBookmark;
 	
 //	ReadingNote(1) : ReadingNoteComment(N) 설정
 	@OneToMany(mappedBy = "reading_note_id")
-	public List<ReadingNoteComment> readingNoteComment;
+	public Set<ReadingNoteComment> readingNoteComment;
 	
 }

@@ -1,6 +1,6 @@
 package com.bit.bookclub.modules.entity;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,6 +22,6 @@ public class BookCategory {
 	
 //	BookCategory(1) : Book(N) 설정
 	@OneToMany(mappedBy = "book_category_id")
-	public List<Book> book;
+	public Set<Book> book;
 	
 }

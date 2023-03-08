@@ -1,5 +1,4 @@
-package com.bit.bookclub.modules.entity;
-//package com.project.bookclub.entity;
+//package com.bit.bookclub.modules.entity;
 //
 //import javax.persistence.Column;
 //import javax.persistence.Entity;
@@ -21,8 +20,8 @@ package com.bit.bookclub.modules.entity;
 //	
 //	private long female_persent;
 //	
-////	User(1) : Gender(N) 설정
+////	Account(1) : Gender(N) 설정
 ////	@ManyToOne
-//	@Column(name = "user_id")
-//	private Integer user_id;
+//	@Column(name = "account_id")
+//	private Integer account_id;
 //}

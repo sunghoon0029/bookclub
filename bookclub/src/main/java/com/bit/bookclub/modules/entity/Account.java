@@ -1,7 +1,7 @@
 package com.bit.bookclub.modules.entity;
 
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -52,14 +52,18 @@ public class Account {
 	
 //	Account(1) : ReadingProgress(N) 설정
 	@OneToMany(mappedBy = "account_id")
-	public List<ReadingProgress> readingProgress;
+	public Set<ReadingProgress> readingProgress;
 	
-//	Account(1) : ReadingNoteBookmark(N) 설정
+//	Account(1) : ReadingNote(N) 설정
 	@OneToMany(mappedBy = "account_id")
-	public List<ReadingNoteBookmark> readingNoteBookmark;
+	public Set<ReadingNote> readingNote;
 	
-//	Account(1) : ReadingNoteComment(N) 설정
-	@OneToMany(mappedBy = "account_id")
-	public List<ReadingNoteComment> readingNoteomment;
+////	Account(1) : ReadingNoteComment(N) 설정
+//	@OneToMany(mappedBy = "account_id")
+//	public List<ReadingNoteComment> readingNoteComment;
+	
+////	Account(1) : ReadingNoteBookmark(N) 설정
+//	@OneToMany(mappedBy = "account_id")
+//	public List<ReadingNoteBookmark> readingNoteBookmark;
 	
 }

@@ -1,6 +1,6 @@
 package com.bit.bookclub.modules.entity;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -36,6 +36,6 @@ public class Book {
 	
 //	Book(1) : ReadingNote(N) 설정
 	@OneToMany(mappedBy = "book_id")
-	public List<ReadingNote> readingNote;
+	public Set<ReadingNote> readingNote;
 	
 }
