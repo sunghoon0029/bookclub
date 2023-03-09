@@ -47,6 +47,11 @@ public class ReadingNote {
 	@Column(name = "book_id")
 	private Integer book_id;
 	
+////	BookCategory(1) : ReadingNote(N) 설정
+////	@ManyToOne
+//	@Column(name = "book_category_id")
+//	private Integer book_category_id;
+	
 ////	ReadingNote(1) : ReadingNoteBookmark(N) 설정
 //	@OneToMany(mappedBy = "reading_note_id")
 //	public List<ReadingNoteBookmark> readingNoteBookmark;

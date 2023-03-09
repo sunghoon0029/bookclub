@@ -35,6 +35,8 @@ public class Account {
 	
 	private Integer age;
 	
+	private long reading_note_count;
+	
 //	private String profile_img_url;
 	
 //	private long male_persent;
@@ -58,12 +60,12 @@ public class Account {
 	@OneToMany(mappedBy = "account_id")
 	public Set<ReadingNote> readingNote;
 	
-////	Account(1) : ReadingNoteComment(N) 설정
-//	@OneToMany(mappedBy = "account_id")
-//	public List<ReadingNoteComment> readingNoteComment;
+//	Account(1) : ReadingNoteComment(N) 설정
+	@OneToMany(mappedBy = "account_id")
+	public Set<ReadingNoteComment> readingNoteComment;
 	
 ////	Account(1) : ReadingNoteBookmark(N) 설정
 //	@OneToMany(mappedBy = "account_id")
-//	public List<ReadingNoteBookmark> readingNoteBookmark;
+//	public Set<ReadingNoteBookmark> readingNoteBookmark;
 	
 }

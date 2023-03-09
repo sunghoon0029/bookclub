@@ -7,5 +7,4 @@ import com.bit.bookclub.modules.entity.Account;
 public interface AccountRepository extends JpaRepository<Account, Integer>{
 
 	Integer countByGender(String gender);
-	
 }

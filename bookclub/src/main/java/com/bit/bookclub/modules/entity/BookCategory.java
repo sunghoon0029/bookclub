@@ -24,4 +24,8 @@ public class BookCategory {
 	@OneToMany(mappedBy = "book_category_id")
 	public Set<Book> book;
 	
+////	BookCategory(1) : ReadingNote(N) 설정
+//	@OneToMany(mappedBy = "book_category_id")
+//	public Set<ReadingNote> readingNote;
+	
 }

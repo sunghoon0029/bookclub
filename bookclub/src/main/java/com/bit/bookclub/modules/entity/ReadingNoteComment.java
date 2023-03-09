@@ -22,14 +22,14 @@ public class ReadingNoteComment {
 	
 	private String reading_note_comment_regdate;
 	
+//	Account(1) : ReadingNoteComment(N) 설정
+//	@ManyToOne
+	@Column(name = "account_id")
+	private Integer account_id;
+	
 //	ReadingNote(1) : ReadingNoteComment(N) 설정
 //	@ManyToOne
 	@Column(name = "reading_note_id")
 	private Integer reading_note_id;
-	
-////	Account(1) : ReadingNoteComment(N) 설정
-////	@ManyToOne
-//	@Column(name = "account_id")
-//	private Integer account_id;
 	
 }

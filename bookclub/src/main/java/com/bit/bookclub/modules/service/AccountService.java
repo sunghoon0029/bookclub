@@ -11,12 +11,16 @@ import org.springframework.stereotype.Service;
 
 import com.bit.bookclub.modules.entity.Account;
 import com.bit.bookclub.modules.repository.AccountRepository;
+import com.bit.bookclub.modules.repository.ReadingNoteRepository;
 
 @Service
 public class AccountService {
 
 	@Autowired
 	private AccountRepository accountRepository;
+	
+	@Autowired
+	private ReadingNoteRepository readingNoteRepository;
 	
 	    // 리스트 처리
 		public List<Account> getAccountList() {
@@ -44,6 +48,8 @@ public class AccountService {
 			
 			account.setAge(nowDate.getYear() - birthday.getYear());
 			
+			account.setReading_note_count(readingNoteRepository.count()); // 독서노트 count
+			
 			return accountRepository.save(account);
 			
 //			// 연령대 그래프
@@ -70,6 +76,11 @@ public class AccountService {
 //			return accountRepository.save(account);
 //		}
 		
+//		public void registCount(Account account) {
+//			
+//			account.setReading_note_count(readingNoteRepository.countByReadingNote(null));
+//		}
+		
 		// 수정 처리
 		public Account updateAccount(Account account) {
 			
@@ -86,6 +97,14 @@ public class AccountService {
 			account.setAge(nowDate.getYear() - birthday.getYear());
 			
 			return accountRepository.saveAndFlush(account);
+		}
+		
+		// 독서노트 count 테스트
+		public Account updateReadingNoteCount(Account account) {
+			
+			account.setReading_note_count(readingNoteRepository.count());
+			
+			return accountRepository.save(account);
 		}
 		
 		// 삭제 처리
