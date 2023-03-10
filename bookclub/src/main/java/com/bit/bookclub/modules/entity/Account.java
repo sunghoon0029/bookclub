@@ -31,7 +31,7 @@ public class Account {
 	
 	private LocalDate birthday;
 	
-	private String joined_at;
+	private String created_at;
 	
 	private Integer age;
 	
@@ -42,15 +42,6 @@ public class Account {
 //	private long male_persent;
 	
 //	private long female_persent;
-	
-//	private Integer twentys_percent;
-	
-//	private Integer thirtys_percent;
-	
-//	private Integer fortys_percent;
-	
-//	private Integer fifties_percent;
-	
 	
 //	Account(1) : ReadingProgress(N) 설정
 	@OneToMany(mappedBy = "account_id")
@@ -63,9 +54,5 @@ public class Account {
 //	Account(1) : ReadingNoteComment(N) 설정
 	@OneToMany(mappedBy = "account_id")
 	public Set<ReadingNoteComment> readingNoteComment;
-	
-////	Account(1) : ReadingNoteBookmark(N) 설정
-//	@OneToMany(mappedBy = "account_id")
-//	public Set<ReadingNoteBookmark> readingNoteBookmark;
 	
 }
